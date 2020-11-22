@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+		<head>
+
+			<title>Sign up Form</title>
+			<link rel="stylesheet" type="text/css" href="style.css">
+			<script type="text/javascript">
+     var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+ 
+	clevertap.account.push({"id": "Z44-Z4K-K65Z"});
+	clevertap.privacy.push({optOut: false}); 
+	clevertap.privacy.push({useIP: false}); 
+	 (function () {
+		 var wzrk = document.createElement('script');
+		 wzrk.type = 'text/javascript';
+		 wzrk.async = true;
+		 wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/a.js';
+		 var s = document.getElementsByTagName('script')[0];
+		 s.parentNode.insertBefore(wzrk, s);
+  })();
+  	
+function onUserLogin(){
+  	clevertap.onUserLogin.push("login",{
+ 		"Site": {
+   		"Name": 'Rose',   
+   		"Email": 'roseandjack@gmail.com',          
+   		"Phone": 9561274006,           // Phone (with the country code
+   		"DOB": new Date()                 // Date of Birth. Date object   
+ 				}
+					});
+
+console.log("profile created")
+		}
+  	
+
+function profilePush(){
+	clevertap.profile.push({
+ "Site": {
+   "Name":   'Arjun' ,         // use the Name variable
+   "Email":  'arjun05@gmail.com',         // Email address of the user
+   "Phone": +918890236699,           // Phone (with the country code
+   "DOB": new Date()                 // Date of Birth. Date object   
+		 }
+				});
+
+console.log("profile successfully pushed")
+
+}
+
+
+function askForPush(){
+	clevertap.notifications.push({
+ "titleText":'Would you like to receive Push Notifications?',
+  "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+  "okButtonText":'Sign me up!',
+  "rejectButtonText":'No thanks',
+  "askAgainTimeInSeconds":5,
+  "okButtonColor":'#f28046'});
+
+	console.log("Ok button created")
+	  	}
+
+
+</script>
+
+		</head>
+		<body>
+		<div class="container"> 
+		<div class="header">
+		</div>
+	</div>
+	<form class="form" id="form">
+		<div class="form-control">
+			<h2>Sign up form</h2><p></p><br><br>
+		 <b>	<label>Name</label><p>
+			<input type="text" id="name" placeholder="Enter your Name"></p>
+		</div>
+		<div class="form-control">
+		 	<label>Email</label><p>
+			<input type="Email" id="email" placeholder="Entet your Email id"></p>
+		</div>
+		<div class="form-control">
+		 	<label>phone number</label><p>
+			<input type="number" id="phone" placeholder="Enter your Phone number"></p>
+		</div>
+		<div class="form-control">
+		 	<label>Dateofbirth</label><p>
+			<input type="date" id="name" placeholder="Entet your date of birth"></p>
+		</div>
+		
+		<button onclick="onUserLogin()"> login  </button><p></p><br>
+		<button onclick="profilePush()"> Profile push </button></p><br>
+		<button onclick="askForPush()"> Ask for push </button>
+
+
+	</form>
+	
+	</body>
+	</html>
