@@ -21,12 +21,16 @@
   })();
   	
 function onUserLogin(){
-  	clevertap.onUserLogin.push("login",{
+	var name=document.getElementById("name");
+	var email=document.getElementById("email");
+	var phoneno=document.getElementById("phone");
+	var Dateofbirth=document.getElementById("date");
+  	clevertap.onUserLogin.push({
  		"Site": {
-   		"Name": 'Rose',   
-   		"Email": 'roseandjack@gmail.com',          
-   		"Phone": 9561274006,           // Phone (with the country code
-   		"DOB": new Date()                 // Date of Birth. Date object   
+   		"Name": name,   
+   		"Email": email,          
+   		"Phone": phoneno,           // Phone (with the country code
+   		"DOB": new Date(Dateofbirth)                 // Date of Birth. Date object   
  				}
 					});
 
@@ -35,12 +39,16 @@ console.log("profile created")
   	
 
 function profilePush(){
+	var name=document.getElementById("name");
+	var email=document.getElementById("email");
+	var phoneno=document.getElementById("phone");
+	var Dateofbirth=document.getElementById("date");
 	clevertap.profile.push({
  "Site": {
-   "Name":   'Arjun' ,         // use the Name variable
-   "Email":  'arjun05@gmail.com',         // Email address of the user
-   "Phone": +918890236699,           // Phone (with the country code
-   "DOB": new Date()                 // Date of Birth. Date object   
+   "Name":   name ,         // use the Name variable
+   "Email":  email,         // Email address of the user
+   "Phone": phoneno,           // Phone (with the country code
+   "DOB": new Date(Dateofbirth)                 // Date of Birth. Date object   
 		 }
 				});
 
@@ -86,12 +94,12 @@ function askForPush(){
 		</div>
 		<div class="form-control">
 		 	<label>Dateofbirth</label><p>
-			<input type="date" id="name" placeholder="Entet your date of birth"></p>
+			<input type="date" id="date" placeholder="Enter your date of birth"></p>
 		</div>
 		
-		<button onclick="onUserLogin()" style=" position: fixed;  left: 46%;  top:73%;height:40px;width:110px;color: blue ;background-color: pink"> <h3>login</h3> </button><p></p><br>
-		<button onclick="profilePush()" style=" position: fixed;   left: 46%;  top:83%;height:40px;width:110px;color: blue ;background-color: pink"><h3> Profile push</h3> </button></p><br>
-		<button onclick="askForPush()"  style=" position: fixed;   left: 46%;  top:93%;height:40px;width:110px;color: blue ;background-color: pink"><h3> Ask for push</h3> </button>
+		<button type="button" onclick="onUserLogin()" style=" position: fixed;  left: 46%;  top:70%;height:40px;width:110px;color: blue ;background-color: pink"> <h3>login</h3>  </button><p></p><br><br><br>
+		<button  type="button" onclick="profilePush()" style=" position: fixed;   left: 46%;  top:80%;height:40px;width:110px;color: blue ;background-color: pink"><h3> Profile push</h3> </button></p><br><br>
+		<button type="button" onclick="askForPush()"  style=" position: fixed;   left: 46%;  top:90%;height:40px;width:110px;color: blue ;background-color: pink"><h3> Ask for push</h3> </button>
 
 
 	</form>
