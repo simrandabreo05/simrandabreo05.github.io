@@ -21,10 +21,10 @@
   })();
   	
 function onUserLogin(){
-	var name=document.getElementById("name");
-	var email=document.getElementById("email");
-	var phoneno=document.getElementById("phone");
-	var Dateofbirth=document.getElementById("date");
+	var name=document.getElementById("name").value;
+	var email=document.getElementById("email").value;
+	var phoneno=document.getElementById("phone").value;
+	var Dateofbirth=document.getElementById("date").value;
   	clevertap.onUserLogin.push({
  		"Site": {
    		"Name": name,   
@@ -39,11 +39,10 @@ console.log("profile created")
   	
 
 function profilePush(){
-	var name=document.getElementById("name");
-	console.log("name added");
-	var email=document.getElementById("email");
-	var phoneno=document.getElementById("phone");
-	var Dateofbirth=document.getElementById("date");
+	var name=document.getElementById("name").value;
+	var email=document.getElementById("email").value;
+	var phoneno=document.getElementById("phone").value;
+	var Dateofbirth=document.getElementById("date").value;
 	clevertap.profile.push({
  "Site": {
    "Name":   name ,         // use the Name variable
